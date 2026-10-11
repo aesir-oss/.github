@@ -1,8 +1,10 @@
 <p align="center">
-  <img src="https://github.com/aesir-oss/.github/raw/main/profile/assets/aesir-oss-ravens.jpg" width="280" alt="Huginn and Muninn, Odin's ravens of Thought and Memory, facing each other above Yggdrasil">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/aesir-oss/.github/raw/main/profile/assets/readme_dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/aesir-oss/.github/raw/main/profile/assets/readme_light.svg">
+    <img alt="Aesir Open Source Solutions, @aesir-oss" src="https://github.com/aesir-oss/.github/raw/main/profile/assets/readme_light.png" width="100%">
+  </picture>
 </p>
-
-<h1 align="center">Aesir Open Source Solutions</h1>
 
 <p align="center">
   <b>Know what you ship, enforce what you allow.</b><br>
@@ -11,25 +13,31 @@
 
 ---
 
-### Thought and Memory
+### The Norns at the Well
 
-Every dawn, Odin sends his two ravens out across the nine worlds. **Huginn** is *Thought*, **Muninn** is *Memory*. By nightfall they return and tell him everything they have seen, and that is how the Allfather knows what happens in every corner of Yggdrasil.
+At the roots of Yggdrasil, the world tree, lies the Well of Urd. Three Norns live there. Each day they draw water from the well to keep the tree from rotting, and they carve into its trunk the fates of everything that lives beneath its branches.
 
-Securing a software supply chain takes the same two things:
+- **Urd** is *what has been*.
+- **Verdandi** is *what is becoming*.
+- **Skuld** is *what shall be*.
 
-- **Memory**: a faithful record of what your software is made of, where each piece came from, and how it was built. SBOMs, provenance, attestations, and audit trails.
-- **Thought**: reasoning over that record to decide what is allowed to grow on your tree. Policy, enforcement, and gates in CI.
+Below them, the serpent Nidhogg gnaws at the roots.
 
-Between them stands the world tree: your dependency graph, where everything you ship has its roots.
+Your dependency graph is that tree. Everything you ship grows from roots you did not plant yourself, and something is always gnawing at them. Keeping it healthy takes the same three kinds of work:
+
+- **Urd: the record.** A faithful account of what your software is made of, where each piece came from, and how it was built. SBOMs, provenance, and audit trails.
+- **Verdandi: the moment of change.** Checks that run as a change happens, at commit time and in CI, so the record is written while the work is fresh rather than reconstructed later.
+- **Skuld: the rule.** Policy that decides what is allowed to grow on your tree: which packages, licenses, and sources may enter, and what gets turned away at the gate.
 
 ### Projects
 
-| Project | Raven | What it does |
+| Project | Norn | What it does |
 | --- | --- | --- |
-| [pixi-sbom](https://github.com/aesir-oss/pixi-sbom) | Memory | Pixi extension that generates SBOMs from Pixi manifests and lock files |
-| [pixi-sbom-pre-commit](https://github.com/aesir-oss/pixi-sbom-pre-commit) | Memory | pre-commit hooks for pixi-sbom |
-| [pixi-ext-contrib](https://github.com/aesir-oss/pixi-ext-contrib) | Both | Community Pixi extensions for supply chain security: SBOMs, license and dependency policy, and more |
-| pixi-policy *(in development)* | Thought | Policy engine for Pixi environments: decide which packages, licenses, and sources are allowed |
+| [pixi-ext-contrib](https://github.com/aesir-oss/pixi-ext-contrib) | All three | Community Pixi extensions for supply chain security. Home of `pixi sbom` (stable) and `pixi policy` (planned). |
+| [pixi-sbom-action](https://github.com/aesir-oss/pixi-sbom-action) | Urd | GitHub Action that generates CycloneDX or SPDX SBOMs from `pixi.lock` and other lockfiles |
+| [pixi-sbom-pre-commit](https://github.com/aesir-oss/pixi-sbom-pre-commit) | Verdandi | pre-commit hooks that keep SBOMs current as you commit |
+| [pixi-policy-pre-commit](https://github.com/aesir-oss/pixi-policy-pre-commit) | Verdandi | pre-commit hooks that check dependency policy before a change lands |
+| [pixi-policy-action](https://github.com/aesir-oss/pixi-policy-action) | Skuld | GitHub Action that enforces dependency policy for Pixi environments in CI |
 
 ### Principles
 
@@ -44,4 +52,4 @@ Issues and pull requests are welcome on any project. Open an issue first for lar
 
 To report a security vulnerability, please **do not** open a public issue. Use GitHub's private vulnerability reporting from the **Security** tab of the affected repository.
 
-<p align="center"><sub>"Huginn and Muninn fly each day over the wide world." (Grímnismál, paraphrased)</sub></p>
+<p align="center"><sub>"The Norns draw water from the well each day and pour it over the ash, so that its limbs neither wither nor rot." (Gylfaginning, paraphrased)</sub></p>
