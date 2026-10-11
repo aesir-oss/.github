@@ -53,4 +53,4 @@ Issues and pull requests are welcome on any project. Open an issue first for lar
 
 To report a security vulnerability, please **do not** open a public issue. Use GitHub's private vulnerability reporting from the **Security** tab of the affected repository.
 
-<p align="center"><sub>"No better burden can you carry on the road than good sense." (Hávamál, stanza 10)</sub></p>
+<p align="center"><sub>"Fortunate is the one who holds good counsel within; bad advice has often come from another's breast." (Hávamál, stanza 9)</sub></p>
