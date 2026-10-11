@@ -13,31 +13,32 @@
 
 ---
 
-### The Norns at the Well
+> *Before you walk through a doorway, look around you carefully. You never know where an enemy may be sitting in the hall.*
+> <br>— Hávamál, stanza 1
 
-At the roots of Yggdrasil, the world tree, lies the Well of Urd. Three Norns live there. Each day they draw water from the well to keep the tree from rotting, and they carve into its trunk the fates of everything that lives beneath its branches.
+### Who we are
 
-- **Urd** is *what has been*.
-- **Verdandi** is *what is becoming*.
-- **Skuld** is *what shall be*.
+Aesir Open Source Solutions builds open source tools that help teams understand and control what goes into their software. We started in the [Pixi](https://pixi.sh) and conda ecosystem, where environments pull in packages from many channels and languages at once, and where supply chain tooling has lagged behind.
 
-Below them, the serpent Nidhogg gnaws at the roots.
+### Why we exist
 
-Your dependency graph is that tree. Everything you ship grows from roots you did not plant yourself, and something is always gnawing at them. Keeping it healthy takes the same three kinds of work:
+Most of the code you ship was written by someone else. Every dependency is a doorway into your project, and most teams cannot say with confidence what came through, where it came from, or whether it should have been let in at all.
 
-- **Urd: the record.** A faithful account of what your software is made of, where each piece came from, and how it was built. SBOMs, provenance, and audit trails.
-- **Verdandi: the moment of change.** Checks that run as a change happens, at commit time and in CI, so the record is written while the work is fresh rather than reconstructed later.
-- **Skuld: the rule.** Policy that decides what is allowed to grow on your tree: which packages, licenses, and sources may enter, and what gets turned away at the gate.
+We build tools that answer those questions:
+
+- **What is in this environment?** Accurate SBOMs generated straight from your lock files, so you have a record of every package, version, source, and license.
+- **Is it allowed?** Policy checks for channels, packages, and licenses that run before a change lands, not after it ships.
+- **Can someone else verify it?** Output in open standards that auditors, customers, and other tools can check independently.
 
 ### Projects
 
-| Project | Norn | What it does |
-| --- | --- | --- |
-| [pixi-ext-contrib](https://github.com/aesir-oss/pixi-ext-contrib) | All three | Community Pixi extensions for supply chain security. Home of `pixi sbom` (stable) and `pixi policy` (planned). |
-| [pixi-sbom-action](https://github.com/aesir-oss/pixi-sbom-action) | Urd | GitHub Action that generates CycloneDX or SPDX SBOMs from `pixi.lock` and other lockfiles |
-| [pixi-sbom-pre-commit](https://github.com/aesir-oss/pixi-sbom-pre-commit) | Verdandi | pre-commit hooks that keep SBOMs current as you commit |
-| [pixi-policy-pre-commit](https://github.com/aesir-oss/pixi-policy-pre-commit) | Verdandi | pre-commit hooks that check dependency policy before a change lands |
-| [pixi-policy-action](https://github.com/aesir-oss/pixi-policy-action) | Skuld | GitHub Action that enforces dependency policy for Pixi environments in CI |
+| Project | What it does |
+| --- | --- |
+| [pixi-ext-contrib](https://github.com/aesir-oss/pixi-ext-contrib) | Community Pixi extensions for supply chain security. Home of `pixi sbom` (stable) and `pixi policy` (planned). |
+| [pixi-sbom-action](https://github.com/aesir-oss/pixi-sbom-action) | GitHub Action that generates CycloneDX or SPDX SBOMs from `pixi.lock` and other lockfiles |
+| [pixi-sbom-pre-commit](https://github.com/aesir-oss/pixi-sbom-pre-commit) | pre-commit hooks that keep SBOMs current as you commit |
+| [pixi-policy-action](https://github.com/aesir-oss/pixi-policy-action) | GitHub Action that enforces dependency policy for Pixi environments in CI |
+| [pixi-policy-pre-commit](https://github.com/aesir-oss/pixi-policy-pre-commit) | pre-commit hooks that check dependency policy before a change lands |
 
 ### Principles
 
@@ -52,4 +53,4 @@ Issues and pull requests are welcome on any project. Open an issue first for lar
 
 To report a security vulnerability, please **do not** open a public issue. Use GitHub's private vulnerability reporting from the **Security** tab of the affected repository.
 
-<p align="center"><sub>"The Norns draw water from the well each day and pour it over the ash, so that its limbs neither wither nor rot." (Gylfaginning, paraphrased)</sub></p>
+<p align="center"><sub>"No better burden can you carry on the road than good sense." (Hávamál, stanza 10)</sub></p>
